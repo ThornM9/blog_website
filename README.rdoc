@@ -1,0 +1,4 @@
+== README
+
+Ruby version: 4.2.7.1
+Dependencies: Check gemfile
