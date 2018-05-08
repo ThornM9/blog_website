@@ -1,7 +1,9 @@
 <h1 align='center'>Listing Articles</h1>
 
+<div class='jumbotron'>
 <% @articles.each do |article| %>
   <div class='row'>
+
     <div class='col-xs-8 col-xs-offset-2'>
       <div class='well well-lg'>
         <div class='article-title'>
@@ -20,7 +22,7 @@
     </div>
   </div>
 <% end %>
-
+<%= link_to 'New Article', new_article_path, class: 'btn btn-sm btn-default col-xs-8 col-xs-offset-2' %>
+</div>
 <br>
 
-<%= link_to 'New Article', new_article_path %>
