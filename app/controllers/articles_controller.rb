@@ -24,7 +24,9 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
+    debugger
     @article = Article.new(article_params)
+    @article.user = User.first
       if @article.save
         redirect_to article_path(@article)
         flash[:success] = "Article was successfully created"
