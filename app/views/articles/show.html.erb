@@ -13,6 +13,9 @@
         <li class='article-title'>
           <%= link_to @article.user.username, user_path(@article.user) %>
         </li>
+        <% if @article.user.admin? %>
+          <li><small>Administrator</small></li>
+        <% end %>
         <li><small><%= pluralize(@article.user.articles.count, 'article') if @article.user.articles %></small></li>
         <% end %>
       </div>
